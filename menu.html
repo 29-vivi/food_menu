@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilingual Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E3FDF5;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+            margin: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ff6347;
+        }
+
+        .menu-toggle {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        .language-toggle {
+            margin: 1rem;
+            text-align: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                left: 0;
+                height: 40vh;
+                background-color: #f3e7e9;
+                padding: 0;
+                margin: 0;
+                z-index: 10;
+                
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+            .nav-links.active {
+                display: flex; 
+            }
+            .nav-links li {
+                list-style: none;
+            }
+            .nav-links a {
+                color: black;
+                text-decoration: none;
+                font-size: 1.5rem; 
+                transition: color 0.3s ease;
+            }
+            .nav-links a:hover {
+                color: #ff6347; 
+            }
+        }   
+
+        .menu {
+            padding: 2rem;
+        }
+        .menu-section {
+            margin: 2rem 0;
+        }
+        .menu-section h2 {
+            text-align: center;
+            background-color: #ff6347;
+            color: white;
+            padding: 0.5rem 0;
+            border-radius: 5px;
+        }
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .menu-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 1rem;
+            padding: 1rem;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .menu-item h3 {
+            margin: 0.5rem 0;
+        }
+        .menu-item .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+            color: #ff6347;
+        }
+        .language-toggle {
+            text-align: center;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="brand">
+            <a href="#" style="color: white; text-decoration: none; font-size: 1.5rem;">My Restaurant <br>
+            </a>
+
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+        </ul>
+        <div class="language-toggle">
+            <button onclick="showLanguage('en')">English</button>
+            <button onclick="showLanguage('tr')">Türkçe</button>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </nav>
+    
+
+    <main class="menu">
+        <!-- Starters Section -->
+        <div class="menu-section">
+            <h2 lang="en">Starters</h2>
+            <h2 lang="tr" style="display: none;">Başlangıçlar</h2>
+            <div class="menu-items">
+                <div class="menu-item" lang="en">
+                    <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Jyothi_Rajesh/Chicken_Biryani.jpg" alt="Bruschetta">
+                    <h3>Bruschetta</h3>
+                    <p class="price">$6.99</p>
+                </div>
+                <div class="menu-item" lang="tr" style="display: none;">
+                    <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Jyothi_Rajesh/Chicken_Biryani.jpg" alt="Bruschetta">
+                    <h3>Bruschetta</h3>
+                    <p class="price">₺60</p>
+                </div>
+                <div class="menu-item" lang="en">
+                    <img src="./assets/food_14.png" alt="Bruschetta">
+                    <h3>Bruschetta</h3>
+                    <p class="price">$6.99</p>
+                </div>
+                <div class="menu-item" lang="tr" style="display: none;">
+                    <img src="https://via.placeholder.com/300x200" alt="Bruschetta">
+                    <h3>Bruschetta</h3>
+                    <p class="price">₺60</p>
+                </div>
+                <div class="menu-item" lang="en">
+                    <img src="./assets/food_18.png" alt="Bruschetta">
+                    <h3>Bruschetta</h3>
+                    <p class="price">$6.99</p>
+                </div>
+                <div class="menu-item" lang="tr" style="display: none;">
+                    <img src="https://via.placeholder.com/300x200" alt="Bruschetta">
+                    <h3>Bruschetta</h3>
+                    <p class="price">₺60</p>
+                </div>
+                <div class="menu-item" lang="en">
+                    <img src="https://via.placeholder.com/300x200" alt="Bruschetta">
+                    <h3>Bruschetta</h3>
+                    <p class="price">$6.99</p>
+                </div>
+                <div class="menu-item" lang="tr" style="display: none;">
+                    <img src="https://via.placeholder.com/300x200" alt="Bruschetta">
+                    <h3>Bruschetta</h3>
+                    <p class="price">₺60</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lunch Section -->
+        <div class="menu-section">
+            <h2 lang="en">Lunch</h2>
+            <h2 lang="tr" style="display: none;">Öğle Yemeği</h2>
+            <div class="menu-items">
+                <div class="menu-item" lang="en">
+                    <img src="./assets/food_16.png" alt="Grilled Chicken">
+                    <h3>Grilled Chicken</h3>
+                    <p class="price">$14.99</p>
+                </div>
+                <div class="menu-item" lang="tr" style="display: none;">
+                    <img src="./assets/food_16.png" alt="Izgara Tavuk">
+                    <h3>Izgara Tavuk</h3>
+                    <p class="price">₺140</p>
+                </div>
+                <div class="menu-item" lang="en">
+                    <img src="./assets/food_17.png" alt="Grilled Chicken">
+                    <h3>Grilled Chicken</h3>
+                    <p class="price">$14.99</p>
+                </div>
+                <div class="menu-item" lang="tr" style="display: none;">
+                    <img src="./assets/food_17.png" alt="Izgara Tavuk">
+                    <h3>Izgara Tavuk</h3>
+                    <p class="price">₺140</p>
+                </div>
+                <div class="menu-item" lang="en">
+                    <img src="./assets/food_18.png" alt="Grilled Chicken">
+                    <h3>Grilled Chicken</h3>
+                    <p class="price">$14.99</p>
+                </div>
+                <div class="menu-item" lang="tr" style="display: none;">
+                    <img src="./assets/food_18.png" alt="Izgara Tavuk">
+                    <h3>Izgara Tavuk</h3>
+                    <p class="price">₺140</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drinks Section -->
+        <div class="menu-section">
+            <h2 lang="en">Drinks</h2>
+            <h2 lang="tr" style="display: none;">İçecekler</h2>
+            <div class="menu-items">
+                <div class="menu-item" lang="en">
+                    <img src="https://cdn.loveandlemons.com/wp-content/uploads/2022/06/lemonade-1.jpg" width="400" height="200" alt="Fresh Lemonade">
+                    <h3>Fresh Lemonade</h3>
+                    <p class="price">$3.99</p>
+                </div>
+                <div class="menu-item" lang="tr" style="display: none;">
+                    <img src="https://cdn.loveandlemons.com/wp-content/uploads/2022/06/lemonade-1.jpg" width="400" height="200" alt="Taze Limonata">
+                    <h3>Taze Limonata</h3>
+                    <p class="price">₺40</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showLanguage(lang) {
+            document.querySelectorAll("h2").forEach(header => {
+                header.style.display = header.getAttribute("lang") === lang ? "block" : "none";
+            });
+            document.querySelectorAll(".menu-item").forEach(item => {
+                item.style.display = item.getAttribute("lang") === lang ? "block" : "none";
+            });
+        }
+
+        // Toggle navigation menu on smaller screens
+        function toggleMenu() {
+            const navLinks = document.querySelector(".nav-links");
+            navLinks.classList.toggle("show");
+        }
+
+        // Set default language on load
+        document.addEventListener("DOMContentLoaded", () => showLanguage('en'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnH2NfR8bS1VtKm79S7U1LT8OUO6U6+fL6EF4F6NZEdkQ1cA+8R4/lVNY1S3xn1J5ZLRpUbw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="restaurant-name" data-i18n="restaurantName">My Restaurant</div>
+        <ul>
+            <li><a href="#home" data-i18n="navHome">Home</a></li>
+            <li><a href="#about" data-i18n="navAbout">About Us</a></li>
+            <li><a href="menu.html" data-i18n="navMenu">Menu</a></li>
+            <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+            <li>
+                <select onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="tr">Türkçe</option>
+                </select>
+            </li>
+        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2 data-i18n="heroTitle">Delicious Food, Delivered to You</h2>
+        <p data-i18n="heroDescription">Experience the taste of excellence with our carefully crafted dishes.</p>
+    </section>
+
+    <section class="section" id="about">
+        <h2 data-i18n="aboutTitle">About Us</h2>
+        <p data-i18n="aboutDescription">Our restaurant has been serving quality food with love and passion since 1990.</p>
+    </section>
+
+    <section class="section" id="menu">
+        <h2 data-i18n="menuTitle">Our Menu</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Jyothi_Rajesh/Chicken_Biryani.jpg" width="400" height="200" alt="Dish 1">
+                <h3 data-i18n="dish1">Chicken Biryani</h3>
+            </div>
+            <div class="menu-item">
+                <img src="./assets/Grilled-Chicken.jpg" width="400" height="200" alt="Dish 2">
+                <h3 data-i18n="dish2">Grilled Chicken</h3>
+            </div>
+            <div class="menu-item">
+                <img src="https://kohinoor-joy.com/wp-content/uploads/2021/02/chilli-chicken-recipe.jpg" width="400" height="200" alt="Dish 3">
+                <h3 data-i18n="dish3">Chicken Chilli</h3>
+            </div>
+        </div>
+        <div class="button-container">
+            <div class="button-container">
+                <a href="menu.html" class="view-more-button-link">
+                    <button class="view-more-button">View Menu</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h2 data-i18n="contactTitle">Contact Us</h2>
+        <p data-i18n="contactEmail">Email: contact@restaurant.com</p>
+        <p data-i18n="contactPhone">Phone: (123) 456-7890</p>
+        <p data-i18n="contactAddress">Address: 123 Food Street, Culinary City</p>
+    
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook fa-2x" style="color: #1877F2;"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                <i class="fa-brands fa-twitter fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footerText">&copy; 2024 Our Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

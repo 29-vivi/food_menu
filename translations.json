@@ -1,0 +1,42 @@
+{
+    "en": {
+        "restaurantName": "My Restaurant",
+        "navHome": "Home",
+        "navAbout": "About Us",
+        "navMenu": "Menu",
+        "navContact": "Contact",
+        "heroTitle": "Delicious Food, Delivered to You",
+        "heroDescription": "Experience the taste of excellence with our carefully crafted dishes.",
+        "aboutTitle": "About Us",
+        "aboutDescription": "Our restaurant has been serving quality food with love and passion since 1990.",
+        "menuTitle": "Our Menu",
+        "dish1": "Chicken Biryani",
+        "dish2": "Grilled Chicken",
+        "dish3": "Chicken Chilli",
+        "contactTitle": "Contact Us",
+        "contactEmail": "Email: contact@restaurant.com",
+        "contactPhone": "Phone: (123) 456-7890",
+        "contactAddress": "Address: 123 Food Street, Culinary City",
+        "footerText": "&copy; 2024 Our Restaurant. All rights reserved."
+    },
+    "tr": {
+        "restaurantName": "Restoranım",
+        "navHome": "Ana Sayfa",
+        "navAbout": "Hakkımızda",
+        "navMenu": "Menü",
+        "navContact": "İletişim",
+        "heroTitle": "Lezzetli Yemekler Kapınıza Gelsin",
+        "heroDescription": "Özenle hazırladığımız yemeklerle mükemmelliğin tadını çıkarın.",
+        "aboutTitle": "Hakkımızda",
+        "aboutDescription": "Restoranımız 1990'dan beri sevgi ve tutkuyla kaliteli yemekler sunmaktadır.",
+        "menuTitle": "Menümüz",
+        "dish1": "Tavuk Biryani",
+        "dish2": "Izgara Tavuk",
+        "dish3": "Tavuk Çili",
+        "contactTitle": "Bize Ulaşın",
+        "contactEmail": "E-posta: contact@restaurant.com",
+        "contactPhone": "Telefon: (123) 456-7890",
+        "contactAddress": "Adres: 123 Food Street, Culinary City",
+        "footerText": "&copy; 2024 Restoranımız. Tüm hakları saklıdır."
+    }
+}
